@@ -1,0 +1,166 @@
+@font-face{
+	font-family: "ledFont";
+	src: url("../font/led.woff");
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	color: #fff;
+
+}
+
+body{
+	min-width: 800px;
+	min-height: 450px;
+	overflow: hidden;
+}
+
+.uiMenuButtons {
+	height: 32px;
+	text-align: center;
+}
+
+.button {
+	width: 32px;
+	height: 32px;
+	border: 0px solid #fff;
+	background-size: contain;
+	filter: grayscale(100%);
+}
+
+.button:disabled{ filter:grayscale(100%) brightness(50%); }
+.button:hover:not([disabled]){ filter:grayscale(0%); }
+
+.btnDummy{ width:16px; display: inline-block; vertical-align: top; }
+
+.btnSeekStart	{ background-image: url("../gfx/icon/circle/seekStart.png"); }
+.btnSeekEnd		{ background-image: url("../gfx/icon/circle/seekEnd.png"); }
+.btnSeekBack	{ background-image: url("../gfx/icon/circle/seekBack.png"); }
+.btnSeekForward	{ background-image: url("../gfx/icon/circle/seekForward.png"); }
+.btnSeekMarkerA	{ background-image: url("../gfx/icon/circle/seekMarkerA.png"); }
+.btnSeekMarkerB	{ background-image: url("../gfx/icon/circle/seekMarkerB.png"); }
+
+.btnStop		{ background-image: url("../gfx/icon/circle/stop.png"); }
+.btnPlay		{ background-image: url("../gfx/icon/circle/play.png"); }
+.btnPause		{ background-image: url("../gfx/icon/circle/pause.png"); }
+
+.btnPlayAB		{ background-image: url("../gfx/icon/circle/playAB.png"); }
+.btnSetMarkerA	{ background-image: url("../gfx/icon/circle/markerA.png"); }
+.btnSetMarkerB	{ background-image: url("../gfx/icon/circle/markerB.png"); }
+
+.btnLoop		{ background-image: url("../gfx/icon/circle/loop.png"); }
+.btnEject		{ background-image: url("../gfx/icon/circle/eject.png"); display:inline-block; vertical-align: top; }
+
+.btnEditCut		{ background-image: url("../gfx/icon/circle/editCut.png"); }
+
+.btnZoomIn		{ background-image: url("../gfx/icon/zoomIn.png"); }
+.btnZoomOut		{ background-image: url("../gfx/icon/zoomOut.png"); }
+.btnZoomArea	{ background-image: url("../gfx/icon/zoomArea.png"); }
+.btnZoomReset	{ background-image: url("../gfx/icon/zoomReset.png"); }
+
+.btnRed{ filter:grayscale(0%) hue-rotate(240deg); }
+.btnBlue{ filter:grayscale(0%) hue-rotate(120deg); }
+
+#fileInput { display: none; }
+.ejectLabel{
+	max-height: 0px;
+}
+
+.trackContainer{
+	position: absolute;
+	margin: 0px 0px 0px 24px;
+	background-color: #0000;
+	z-index: 100;
+}
+
+.channelContainer {
+	width: 100%;
+}
+
+.channelLeftContainer{
+	display: inline-block;
+	width: 25px;
+}
+
+.channelMiddleContainer{
+	display: inline-block;
+	width: 94%;
+	border: 1px solid #fff;
+}
+
+.channelRightContainer{
+	display: inline-block;
+	width: 24px;
+}
+
+.channelButtons {
+	width: 40px;
+	display: inline-block;
+}
+
+.channelButton{
+	width: 24px;
+	height: 24px;
+	border: 0px solid #fff;
+	background-size: contain;
+	filter: grayscale(100%);
+}
+
+.channelButton:hover{ filter:grayscale(0%); }
+.channelButtonMute { background-image: url("../gfx/icon/circle/m.png"); }
+.channelButtonSolo { background-image: url("../gfx/icon/circle/s.png"); }
+.channelButtonTrash{ background-image: url("../gfx/icon/recycle.png"); }
+
+.channelVolume{
+	width: 24px;
+	margin: 24px 0px 0px 0px;	/* FIXME */
+	height: 50%;
+	writing-mode: bt-lr;
+	-webkit-appearance: slider-vertical;
+	color: #f00;		/* FIXME */
+	background: #444;	/* FIXME */
+}
+
+.channelVUmeterContainer{
+	width: 100%;
+	height: 100%;
+}
+
+.channelVUmeterSegment{
+	width: 24px;
+	height: 4px;
+	margin: 4px 0px 0px 0px;
+	background-color: #0f0;
+}
+
+.TrackOverlay{
+	position: absolute;
+	background-color: #0f07;
+	width: 100%;
+	height: 100%;
+}
+
+.uiClockContainer {
+	width: 100%;
+}
+
+.uiClock {
+	width: 24%;
+	margin: 1px;
+	text-align: center;
+	display: inline-block;
+	font-size: small;
+	white-space: pre;
+	overflow: hidden;
+}
+
+.uiClockData {
+	font-family: "ledFont", monospace;
+}
+
+.canvas{
+	width: 100%;
+	height:100%;
+}
